@@ -1,0 +1,31 @@
+#logo{
+    width: 60px;
+    height: auto;
+}
+#namabrand{
+    width: auto;
+    height: 30px;
+}
+.pad{
+    padding-bottom: 120px;
+    /* margin-bottom: 200px; */
+}
+.navbar{
+    background-color:#1dd70dff ;
+}
+.lineargradient span{
+    font-size:50px;
+}
+.navbar-nav a{
+    color: green!important;
+}
+.navbar-nav a:hover{
+    color:#1dd70dff!important;
+}
+
+.wrapper{
+    position:relative;
+    /* height: 100vh; */
+    /* width: 100%; */
+    /* min-width:100%; */
+}
