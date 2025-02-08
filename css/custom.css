@@ -1,31 +1,46 @@
-#logo{
+#logo {
     width: 60px;
     height: auto;
 }
-#namabrand{
+
+#namabrand {
     width: auto;
     height: 30px;
 }
-.pad{
+
+.pad {
     padding-bottom: 120px;
     /* margin-bottom: 200px; */
 }
-.navbar{
-    background-color:#1dd70dff ;
-}
-.lineargradient span{
-    font-size:50px;
-}
-.navbar-nav a{
-    color: green!important;
-}
-.navbar-nav a:hover{
-    color:#1dd70dff!important;
+
+.navbar {
+    background-color: #1dd70dff;
 }
 
-.wrapper{
-    position:relative;
+.lineargradient span {
+    font-size: 50px;
+}
+
+.navbar-nav a {
+    color: green !important;
+}
+
+.navbar-nav a:hover {
+    color: #1dd70dff !important;
+}
+
+.wrapper {
+    position: relative;
     /* height: 100vh; */
     /* width: 100%; */
     /* min-width:100%; */
+}
+
+/* about */
+
+#about.jumbotron.page-header {
+    background-position: center;
+    height: 250px;
+    background: linear-gradient(rgba(252, 255, 252, 0.5), rgba(0, 128, 0, .5)), url(../img/page-header.jpg) no-repeat center center;
+    background-size: cover;
 }
