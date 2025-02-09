@@ -9,7 +9,7 @@
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="../img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -19,10 +19,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/custom.css" rel="stylesheet">
 </head>
 
 <body>
@@ -63,17 +64,21 @@
     <!-- Navbar Start -->
     <div class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
-            <a href="index.html" class="navbar-brand ml-lg-3">
+            <!-- <a href="index.html" class="navbar-brand ml-lg-3">
                 <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-book-reader mr-3"></i>Edukate</h1>
+            </a> -->
+            <a href="index.html" class='navbar-brand ml-lg-3'> 
+                <img src="../img/buku.png" alt="" id="logo">
+                <img src="../img/galibakat.png" alt="" id="namabrand">
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav mx-auto py-0">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="course.html" class="nav-item nav-link">Courses</a>
+                    <a href="../" class="nav-item nav-link">Home</a>
+                    <a href="/about/" class="nav-item nav-link">About</a>
+                    <a href="/course" class="nav-item nav-link">Courses</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0">
@@ -83,7 +88,7 @@
                             <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                         </div>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link active">Contact</a>
+                    <a href="/contacts/" class="nav-item nav-link active">Contact</a>
                 </div>
                 <a href="" class="btn btn-primary py-2 px-4 d-none d-lg-block">Join Us</a>
             </div>
@@ -134,8 +139,9 @@
                                 <i class="fa fa-2x fa-map-marker-alt text-white"></i>
                             </div>
                             <div class="mt-n1">
-                                <h4>Our Location</h4>
-                                <p class="m-0">123 Street, New York, USA</p>
+                                <h4>Lokasi Kami</h4>
+                                <p class="m-0">Jl Raya Timur Cicalengka , Cikarmajaya , Margaasih , Kec Cicalengka</p>
+                                <p class="m-0">Bandung - Indonesia 40395</p>
                             </div>
                         </div>
                         <div class="d-flex align-items-center mb-5">
@@ -143,8 +149,8 @@
                                 <i class="fa fa-2x fa-phone-alt text-white"></i>
                             </div>
                             <div class="mt-n1">
-                                <h4>Call Us</h4>
-                                <p class="m-0">+012 345 6789</p>
+                                <h4>Hubungi Kami</h4>
+                                <p class="m-0">+62 8212 903 1607</p>
                             </div>
                         </div>
                         <div class="d-flex align-items-center">
@@ -152,32 +158,32 @@
                                 <i class="fa fa-2x fa-envelope text-white"></i>
                             </div>
                             <div class="mt-n1">
-                                <h4>Email Us</h4>
-                                <p class="m-0">info@example.com</p>
+                                <h4>Email</h4>
+                                <p class="m-0">galibakat@gmail.com</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-7">
                     <div class="section-title position-relative mb-4">
-                        <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Need Help?</h6>
-                        <h1 class="display-4">Send Us A Message</h1>
+                        <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Berhubungan Langsung dengan Kami</h6>
+                        <h1 class="display-4">Kirim Di Sini</h1>
                     </div>
                     <div class="contact-form">
-                        <form>
+                        <form id="contactForm" onsubmit="sendWhatsAppMessage(event)">
                             <div class="row">
                                 <div class="col-6 form-group">
-                                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Your Name" required="required">
+                                    <input type="text" id="name" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Your Name" required="required">
                                 </div>
                                 <div class="col-6 form-group">
-                                    <input type="email" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Your Email" required="required">
+                                    <input type="email" id="email" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Your Email" required="required">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Subject" required="required">
+                                <input type="text" id="subject" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Subject" required="required">
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control border-top-0 border-right-0 border-left-0 p-0" rows="5" placeholder="Message" required="required"></textarea>
+                                <textarea id="message" class="form-control border-top-0 border-right-0 border-left-0 p-0" rows="5" placeholder="Message" required="required"></textarea>
                             </div>
                             <div>
                                 <button class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
@@ -188,6 +194,25 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function sendWhatsAppMessage(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+    
+            // Get the form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+    
+            // Construct the WhatsApp message URL
+            const phoneNumber = '6285163626550'; // Replace with your WhatsApp number
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=Name:%20${encodeURIComponent(name)}%0AEmail:%20${encodeURIComponent(email)}%0ASubject:%20${encodeURIComponent(subject)}%0AMessage:%20${encodeURIComponent(message)}`;
+    
+            // Open the WhatsApp URL in a new tab
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
     <!-- Contact End -->
 
 
